@@ -30,8 +30,7 @@ Here my screenshoot
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: (https://irenepastrello.altervista.org/frontendmentor/Stats_preview_card_component/index.html)
 
 ## My process
 
@@ -44,7 +43,7 @@ Here my screenshoot
 
 ## Author
 
-- Website - (https://irenepastrello.altervista.org/)
+- Website - (https://irenepastrello.altervista.org/frontendmentor/Stats_preview_card_component/index.html)
 - Frontend Mentor - [@Nene16](https://www.frontendmentor.io/profile/Nene16)
 
 
