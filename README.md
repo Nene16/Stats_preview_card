@@ -30,7 +30,7 @@ Here my screenshoot
 
 ### Links
 
-- Live Site URL: (https://irenepastrello.altervista.org/frontendmentor/Stats_preview_card_component/index.html)
+- Live Site URL: (https://nene16.github.io/Stats_preview_card/)
 
 ## My process
 
