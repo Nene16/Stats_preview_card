@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+* {
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+*::before, *::after {
+    box-sizing: border-box;
+}
+
+/*
+Legend:
+    (00) Root 
+    (01) Style Color&Font
+        (1.1) container1-2 color
+        (1.2) cardTITLE
+        (1.3) statCARD
+        (1.4) Image style
+    (02) Flex box
+        (2.1) contenitore base
+        (2.2) contenitore I 
+        (2.3) item innestato 1
+    (S) Media Device 
+        (S.1) Media Tablet
+        (S.2) Media smartphone
+*/
+
+
+/* (00) Root  */
+:root {
+    /* Palette */
+    /* Background */
+    --bcg:hsl(233, 47%, 7%);
+    --CARDbcg:hsl(244, 38%, 16%);
+    --accent:hsl(277, 64%, 61%);
+
+    /* Font */
+    --main:hsl(0, 0%, 100%);
+    --parag:hsla(0, 0%, 100%, 0.75);
+    --stat:hsla(0, 0%, 100%, 0.6);
+
+    /* font size */
+    --xl: 36px;
+    --lg: 25px;
+    --md: 15px;
+
+    /* Type Weight */
+    --Bold: 700;
+    --Regular: 400;
+
+    /* Margin and Padding */
+    --spaceMD: 78px;
+    --spaceSM: 73px;
+    --spaceSX: 27px;
+}
+
+/* (01) Style Color&Font */
+
+/* (1.1) container1-2 color */
+.container1 {
+    background-color: var(--bcg);
+}
+.container2 {
+    background-color: var(--CARDbcg);
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+/* (1.2) cardTITLE */
+.cardTITLE h2{
+    color: var(--main);
+    font-weight: var(--Bold);
+    font-size: var(--xl);
+}
+.cardTITLE p{
+    color: var(--parag);
+    font-size: var(--md);
+    margin-top: var(--spaceSX);
+    line-height: 1.6;
+}
+.accent {
+    color: var(--accent);
+}
+
+/* (1.3) statCARD */
+.statCARD {
+    font-family: 'Lexend Deca', sans-serif;
+    text-transform: uppercase;
+}
+.statCARD li{
+    display: inline-block;
+}
+.statCARD h3{
+    color: var(--main);
+    font-weight: var(--Bold);
+    font-size: var(--lg);
+}
+.statCARD p{
+    color: var(--parag);
+    font-weight: var(--Regular);
+    font-size: 13px;
+}
+
+/* (1.4) Image style */
+.image {
+    background-color: var(--accent);
+}
+.image img{
+    display: block;
+    mix-blend-mode: multiply;
+    opacity: 70%;
+}
+
+/* (02) Flex box */
+
+/* (2.1) contenitore base */
+.container1 {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/* (2.2) contenitore I */
+.container2 {
+    display: flex;
+    width: 1100px;
+    height: 448px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* si lavora da qui in GIU!!!!*/
+
+/* (2.3) item innestato 1 */
+.cardMAIN {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.cardTITLE {
+    margin:70px 78px 0 78px;
+    flex:3;
+}
+.statCARD ul{
+    display: flex;
+    justify-content: space-between;
+    margin: var(--spaceSM);
+    flex: 2;
+}
+.statCARD li {
+    align-self: center;
+}
+
+/* (S) Media Device */
+
+/* (S.1) Media Tablet */
+@media all and (max-width:1099px) {
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    width: 540px;
+    height: 95vh;
+    order:99;
+}
+
+.image {
+    order:1;
+}
+
+.cardMAIN {
+    order:2;
+    text-align: center;
+}
+
+.cardTITLE h2{
+    font-size: var(--lg);
+}
+
+}
+
+/* (S.2) Media smartphone */
+
+@media all and (max-width:550px) {
+
+.container2 {
+    width: 326px;
+    height: 95vh;
+    }
+
+.image img {
+    width: 326px;
+    height: 241px;
+}
+.cardTITLE{
+    margin:3%;
+    flex:1;
+}
+
+.statCARD ul{
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0 0 20px 0;
+}
+.statCARD li{
+    margin: 5px;
+}
+
+}
+
+
+
+
+/* border area viewport*/
+/*
+.container2, 
+.cardMAIN,
+.cardTITLE,
+.statCARD, 
+.statCARD li, 
+.image {
+    border: 1px dashed #fff;
+}
+*/
